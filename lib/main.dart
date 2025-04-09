@@ -149,7 +149,7 @@ class HomePage extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center),
                   children: [
-                    CircleAvatar(
+    CircleAvatar(
                       radius: 50,
                       backgroundColor: Colors.white,
                       child: Icon(Icons.person, size: 80, color: Colors.grey,
