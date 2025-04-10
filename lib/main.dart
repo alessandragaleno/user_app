@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
     void _login() {
       if (_formKey.currentState!.validate()) {
         _formKey.currentState!.save();
-        if (_usuario == 'Chico' && _senha == '1234'){
+        if (_usuario == 'alexya' && _senha == '1234'){
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => HomePage(usuario: _usuario)),
@@ -44,9 +44,11 @@ class _LoginPageState extends State<LoginPage> {
             SnackBar(content: Text('Usuário ou senha inválidos')),
           );
         }
+      }
+    }
 
   @override
-  Widget build(BuildContext context, dynamic icons) {
+  Widget build(BuildContext context) {
    return Scaffold(
     backgroundColor: Colors.orange,
       body: Center(   
@@ -63,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Icon(icons.person, size: 100, color: Colors.orange),
+                  Icon(Icons.person, size: 100, color: Colors.orange),
                   SizedBox(height: 20),
                   TextFormField(
                     decoration: InputDecoration(
@@ -108,14 +110,6 @@ class _LoginPageState extends State<LoginPage> {
         
   }
 }
-      }
-      
-        @override
-        Widget build(BuildContext context) {
-          // TODO: implement build
-          throw UnimplementedError();
-        }
-    }
 
     //Classe Homepage que será a página de perfil de usuário
     class HomePage extends StatelessWidget {
